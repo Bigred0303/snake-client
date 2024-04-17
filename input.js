@@ -1,21 +1,20 @@
 let connection;
 
+const keyMap = {
+    '\u0077': 'up',
+    '\u0061': 'left',
+    '\u0073': 'down',
+    '\u0064': 'right'
+  };
+
 const handleUserInput = function (key) {
     if (key === "\u0003") {
         console.log("Exiting Game")
         process.exit();
       }
-      if (key === "\u0077") {
-        connection.write("Move: up")
-      }
-      if (key === "\u0061") {
-        connection.write("Move: left")
-      }
-      if (key === "\u0073") {
-        connection.write("Move: down")
-      }
-      if (key === "\u0064") {
-        connection.write("Move: right")
+      const direction = keyMap[key];
+      if (direction) {
+        connection.write(`Move: ${direction}`);
       }
   };
 
