@@ -23,6 +23,10 @@ const connect = function () {
     conn.write("Name: GDB")
   });
 
+//   conn.on('connect', () => {
+//     conn.write("Move: up")
+//   });
+
   return conn;
 };
 
