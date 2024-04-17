@@ -9,9 +9,18 @@ const connect = function () {
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
+
   conn.on('data', (data) => {
     console.log(data);
     conn.end();
+  });
+
+  conn.on('connect', () => {
+    console.log("Connected to game server");
+  });
+
+  conn.on('connect', () => {
+    conn.write("Name: GDB")
   });
 
   return conn;
