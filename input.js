@@ -19,7 +19,8 @@ const handleUserInput = function (key) {
       const keyPress = keyMap[key];
       if (keyPress === 'up' || keyPress === 'left' || keyPress === 'down' || keyPress === 'right') {
         connection.write(`Move: ${keyPress}`);
-      } else {
+      } 
+      else {
         connection.write(`Say: ${keyPress}`);
       }
   };
