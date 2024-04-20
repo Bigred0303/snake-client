@@ -1,9 +1,9 @@
 const IP = 'localhost';
 const PORT = 50541;
-const Name = "GDB"
+const Name = "GDB";
 
 module.exports = {
-    IP,
-    PORT,
-    Name
+  IP,
+  PORT,
+  Name
 };
